@@ -127,7 +127,9 @@ ssh root@ubuntu-server
   sudo systemctl status odoo-docker
 # ✅ Optional: Enable Auto-Start on Boot 
   sudo systemctl enable odoo-docker
-
- 
+# Go into your Odoo container:
+  docker exec -it odoo-app bash
+# Run the update command:
+  python3 odoo-bin -c /etc/odoo/odoo.conf -d dbodoo -u custom_module
 
 
